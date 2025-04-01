@@ -16,6 +16,13 @@
 
 .sidebar {
     grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 50px 1fr 1fr;
+    gap: 15px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .main-content {
