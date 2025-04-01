@@ -5,6 +5,7 @@
 .container {
     display: grid;
     grid-template-columns: 2fr 5fr;
+    grid-template-rows: 1fr 9fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main-content";
@@ -12,6 +13,24 @@
 
 .header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    gap: 15px;
+    align-items: center;
+}
+
+.header > .user-info1 {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-items: center;
+    align-items: center;
+}
+
+.header > .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
 
 .sidebar {
