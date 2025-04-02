@@ -2,6 +2,10 @@
     font-family: Roboto, sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
 img {
     width: 50px;
     height: 20px;
@@ -44,6 +48,9 @@ img {
 
 .sidebar {
     grid-area: sidebar;
+    background-color: rgb(49, 147, 212);
+    color: white;
+    font-weight: bold;
     /* display: grid;
     grid-template-rows: 50px 1fr 1fr;
     gap: 15px; */
@@ -55,6 +62,18 @@ img {
 
 ul {
     list-style-type: none;
+    padding-left: 0;
+    display: grid;
+}
+
+li {
+    margin-bottom: 16px;
+}
+
+.nav {
+    display: grid;
+    justify-items: start;
+    align-items: center; 
 }
 
 .main-content {
