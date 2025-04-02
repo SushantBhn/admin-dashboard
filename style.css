@@ -35,9 +35,9 @@
 
 .sidebar {
     grid-area: sidebar;
-    display: grid;
+    /* display: grid;
     grid-template-rows: 50px 1fr 1fr;
-    gap: 15px;
+    gap: 15px; */
 }
 
 ul {
@@ -46,4 +46,40 @@ ul {
 
 .main-content {
     grid-area: main-content;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas: 
+        "projects announcements"
+        "projects trending";
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 60px 200px 200px 200px;
+    gap: 30px;
+}
+
+.project {
+    height: auto;
+}
+
+.projects > h3 {
+    grid-column: 1 / -1;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+    display: grid;
+}
+
+.trending > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
